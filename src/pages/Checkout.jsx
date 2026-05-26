@@ -171,13 +171,8 @@ export default function Checkout() {
                 ) : (
                   <div className="flex gap-2">
                     <input
-                      value={couponState.input}
-                      onChange={(e) =>
-                        couponDispatch({
-                          type: "SET_INPUT",
-                          payload: e.target.value,
-                        })
-                      }
+                      value={couponInput}
+                      onChange={(e) => setCouponInput(e.target.value)}
                       onKeyDown={(e) =>
                         e.key === "Enter" && handleApplyCoupon()
                       }
