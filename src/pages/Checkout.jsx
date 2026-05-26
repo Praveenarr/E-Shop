@@ -6,8 +6,17 @@ import { useAuth } from "../hooks/useAuth";
 import { formatPrice, truncate } from "../utils/formatters";
 
 export default function Checkout() {
-  const { items, summary, coupon, applyCode, removeCode, increase, decrease, clear } = useCart();
-  const [couponInput, setCouponInput] = useState('');
+  const {
+    items,
+    summary,
+    coupon,
+    applyCode,
+    removeCode,
+    increase,
+    decrease,
+    clear,
+  } = useCart();
+  const [couponInput, setCouponInput] = useState("");
   const { user } = useAuth();
   const navigate = useNavigate();
   const [ordered, setOrdered] = useState(false);
@@ -30,10 +39,10 @@ export default function Checkout() {
   });
 
   const handleApplyCoupon = () => {
-    if (!couponInput.trim()) return
-    applyCode(couponInput)
-    setCouponInput('')
-  }
+    if (!couponInput.trim()) return;
+    applyCode(couponInput);
+    setCouponInput("");
+  };
 
   const onSubmit = () => {
     setOrdered(true);
@@ -63,7 +72,7 @@ export default function Checkout() {
             Order Placed!
           </h2>
           <p className="text-gray-500 mb-6 text-sm sm:text-base">
-            Thank you for shopping with Starflinx. Your order is confirmed.
+            Thank you for shopping with Starlfinx . Your order is confirmed.
           </p>
           <button
             onClick={() => navigate("/")}
@@ -139,12 +148,18 @@ export default function Checkout() {
 
               {/* Coupon section */}
               <div className="border-t border-gray-100 mt-4 pt-4">
-                <p className="text-xs font-semibold text-gray-700 mb-2">Coupon Code</p>
+                <p className="text-xs font-semibold text-gray-700 mb-2">
+                  Coupon Code
+                </p>
                 {coupon.code ? (
                   <div className="flex items-center justify-between bg-green-50 border border-green-200 rounded-lg px-3 py-2">
                     <div>
-                      <span className="text-green-700 font-semibold text-xs">{coupon.code}</span>
-                      <p className="text-green-600 text-xs">{coupon.data?.label} applied!</p>
+                      <span className="text-green-700 font-semibold text-xs">
+                        {coupon.code}
+                      </span>
+                      <p className="text-green-600 text-xs">
+                        {coupon.data?.label} applied!
+                      </p>
                     </div>
                     <button
                       onClick={removeCode}
@@ -156,9 +171,16 @@ export default function Checkout() {
                 ) : (
                   <div className="flex gap-2">
                     <input
-                      value={couponInput}
-                      onChange={e => setCouponInput(e.target.value)}
-                      onKeyDown={e => e.key === 'Enter' && handleApplyCoupon()}
+                      value={couponState.input}
+                      onChange={(e) =>
+                        couponDispatch({
+                          type: "SET_INPUT",
+                          payload: e.target.value,
+                        })
+                      }
+                      onKeyDown={(e) =>
+                        e.key === "Enter" && handleApplyCoupon()
+                      }
                       placeholder="Enter code…"
                       className="flex-1 min-w-0 border border-gray-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-400"
                     />
@@ -174,7 +196,9 @@ export default function Checkout() {
                   <p className="text-red-500 text-xs mt-1.5">{coupon.error}</p>
                 )}
                 {!coupon.code && !coupon.error && (
-                  <p className="text-gray-400 text-xs mt-1.5">Try: SAVE10 · FLAT200 · FIRST20 · SUMMER15</p>
+                  <p className="text-gray-400 text-xs mt-1.5">
+                    Try: SAVE10 · FLAT200 · FIRST20 · SUMMER15
+                  </p>
                 )}
               </div>
 

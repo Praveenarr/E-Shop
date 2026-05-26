@@ -25,7 +25,7 @@ export default function Navbar() {
             className="flex items-center gap-2 font-bold text-xl tracking-tight"
           >
             <span className="text-yellow-400 text-2xl">★</span>
-            <span>Starflinx</span>
+            <span>Starlfinx </span>
           </Link>
 
           {/* Desktop Links */}

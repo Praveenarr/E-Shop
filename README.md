@@ -1,18 +1,18 @@
-# Starflinx
+# Starlfinx
 
 A full-featured e-commerce single-page application built with React, Redux Toolkit, and Tailwind CSS.
 
 ## Tech Stack
 
-| Layer | Library / Tool |
-|---|---|
-| UI | React 18, Tailwind CSS v3 |
-| State | Redux Toolkit (`createSlice`, `createAsyncThunk`, `createSelector`) |
-| Routing | React Router v6 |
-| Forms | React Hook Form |
-| HTTP | Axios (with JWT interceptor) |
-| Build | Vite 6 |
-| Data | [FakeStore API](https://fakestoreapi.com) |
+| Layer   | Library / Tool                                                      |
+| ------- | ------------------------------------------------------------------- |
+| UI      | React 18, Tailwind CSS v3                                           |
+| State   | Redux Toolkit (`createSlice`, `createAsyncThunk`, `createSelector`) |
+| Routing | React Router v6                                                     |
+| Forms   | React Hook Form                                                     |
+| HTTP    | Axios (with JWT interceptor)                                        |
+| Build   | Vite 6                                                              |
+| Data    | [FakeStore API](https://fakestoreapi.com)                           |
 
 ## Features
 
@@ -65,21 +65,21 @@ src/
 
 ## Demo Credentials
 
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@gmail.com | admin123 |
-| User | register via Sign Up | — |
+| Role  | Email                | Password |
+| ----- | -------------------- | -------- |
+| Admin | admin@gmail.com      | admin123 |
+| User  | register via Sign Up | —        |
 
 > Admin users can access **Manage Products** to add, edit, and delete products.
 
 ## Coupon Codes
 
-| Code | Discount | Minimum Cart | Applies To |
-|---|---|---|---|
-| `SAVE10` | 10% off | ₹500 | All categories |
-| `FLAT200` | ₹200 flat off | ₹1000 | Electronics only |
-| `FIRST20` | 20% off | No minimum | All categories |
-| `SUMMER15` | 15% off | ₹300 | Clothing only |
+| Code       | Discount      | Minimum Cart | Applies To       |
+| ---------- | ------------- | ------------ | ---------------- |
+| `SAVE10`   | 10% off       | ₹500         | All categories   |
+| `FLAT200`  | ₹200 flat off | ₹1000        | Electronics only |
+| `FIRST20`  | 20% off       | No minimum   | All categories   |
+| `SUMMER15` | 15% off       | ₹300         | Clothing only    |
 
 ## License
 

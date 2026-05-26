@@ -32,7 +32,7 @@ export default function Signup() {
               to="/"
               className="inline-flex items-center gap-2 text-indigo-700 font-bold text-xl mb-4"
             >
-              <span className="text-yellow-400 text-2xl">★</span> Starflinx
+              <span className="text-yellow-400 text-2xl">★</span> Starlfinx
             </Link>
             <h1 className="text-2xl font-bold text-gray-900">Create account</h1>
             <p className="text-gray-400 text-sm mt-1">
